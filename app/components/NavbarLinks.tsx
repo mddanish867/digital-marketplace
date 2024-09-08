@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-export const navbarlink = [
+export const navbarlinks = [
   {
     id: 0,
     name: "Home",
@@ -31,7 +31,7 @@ export default function NavbarLinks() {
   const location = usePathname();
   return (
     <div className="hidden md:flex justify-center items-center col-span-6 gap-x-2">
-      {navbarlink.map((item) => (
+      {navbarlinks.map((item) => (
         <Link
           href={item.href}
           key={item.id}

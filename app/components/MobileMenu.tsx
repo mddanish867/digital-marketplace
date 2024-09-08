@@ -1,15 +1,15 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Link, Menu } from "lucide-react";
-import React from "react";
-import { navbarlink } from "./NavbarLinks";
+import { Menu } from "lucide-react";
+import { navbarlinks } from "./NavbarLinks";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 
 export default function MobileMenu() {
   const location = usePathname();
-
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -19,7 +19,7 @@ export default function MobileMenu() {
       </SheetTrigger>
       <SheetContent>
         <div className="mt-5 flex px-2 space-y-1 flex-col">
-          {navbarlink.map((item) => (
+          {navbarlinks.map((item) => (
             <Link
               href={item.href}
               key={item.id}

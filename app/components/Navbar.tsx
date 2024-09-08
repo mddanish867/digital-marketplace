@@ -18,7 +18,7 @@ export default async function Navbar() {
       <div className="md:col-span-3">
         <Link href="/">
           <h1 className="text-2xl font-semibold">
-            Danish<span className="text-primary">UI</span>
+            <span className="text-primary">Muntaha</span>
           </h1>
         </Link>
       </div>
@@ -34,11 +34,11 @@ export default async function Navbar() {
           />
         ) : (
           <div className="flex items-center gap-x-2">
-            <Button>
-              <LoginLink>Sign in</LoginLink>
+            <Button asChild>
+              <LoginLink>Login</LoginLink>
             </Button>
             <Button variant="secondary" asChild>
-              <RegisterLink>Sign up</RegisterLink>
+              <RegisterLink>Register</RegisterLink>
             </Button>
           </div>
         )}
